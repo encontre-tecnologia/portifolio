@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Guilherme e Hiasmin</title>
+    <!-- Carregando o Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Importando a fonte Inter do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Definindo a fonte Inter como padrão para todo o corpo da página */
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden; /* Evita a barra de rolagem horizontal */
+        }
+
+        /* Estilos para as formas animadas no fundo */
+        .animated-shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.1;
+            z-index: 0;
+            filter: blur(40px);
+        }
+
+        /* Definindo as animações com mais movimento */
+        @keyframes float {
+            0% { transform: translateY(0px) translateX(0px); }
+            50% { transform: translateY(-60px) translateX(40px); }
+            100% { transform: translateY(0px) translateX(0px); }
+        }
+        
+        @keyframes float-reverse {
+            0% { transform: translateY(0px) translateX(0px); }
+            50% { transform: translateY(40px) translateX(-60px); }
+            100% { transform: translateY(0px) translateX(0px); }
+        }
+
+        /* Aplicando as animações às formas */
+        .shape1 {
+            width: 200px;
+            height: 200px;
+            background: #06b6d4; /* Ciano */
+            top: 10%;
+            left: 5%;
+            animation: float 15s ease-in-out infinite;
+        }
+
+        .shape2 {
+            width: 300px;
+            height: 300px;
+            background: #d946ef; /* Fúcsia */
+            bottom: 5%;
+            right: 10%;
+            animation: float-reverse 20s ease-in-out infinite;
+        }
+        
+        .shape3 {
+            width: 150px;
+            height: 150px;
+            background: #6366f1; /* Indigo */
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: float 18s ease-in-out infinite;
+        }
+
+        .main-content {
+            position: relative;
+            z-index: 1;
+        }
+
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-300 antialiased">
+    <!-- Container para as formas animadas -->
+    <div class="fixed top-0 left-0 w-full h-full">
+        <div class="animated-shape shape1"></div>
+        <div class="animated-shape shape2"></div>
+        <div class="animated-shape shape3"></div>
+    </div>
+
+    <!-- Container principal com espaçamento responsivo -->
+    <div class="container mx-auto p-4 md:p-8 lg:p-12 main-content">
+        
+        <!-- Cabeçalho da página -->
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">Portfólio de Talentos</h1>
+            <p class="text-lg text-slate-400">Guilherme Lopes Rocetom & Hiasmin Lorrane Cardoso</p>
+        </header>
+
+        <!-- Grid principal que divide os portfólios em duas colunas em telas grandes -->
+        <main class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+            <!-- Coluna do Guilherme -->
+            <div class="bg-slate-800/80 backdrop-blur-sm p-8 rounded-2xl shadow-2xl border border-slate-700/50 flex flex-col">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-white">GUILHERME LOPES ROCETOM</h2>
+                    <p class="text-cyan-400 font-medium mt-1">Desenvolvedor de Sistemas | React Native | Java | Cloud & DevOps</p>
+                    <div class="flex justify-center items-center flex-wrap space-x-4 mt-4 text-slate-400 text-sm">
+                        <span>São Carlos SP</span>
+                        <span>•</span>
+                        <span>(16) 99439-2545</span>
+                    </div>
+                     <div class="flex justify-center items-center space-x-4 mt-2">
+                        <a href="mailto:guilhermedevsistemas@gmailcom" class="text-cyan-400 hover:text-white transition-colors duration-300">E-mail</a>
+                        <a href="www.linkedin.com/in/guilherme-lopes-rocetom-3a437a25b" class="text-cyan-400 hover:text-white transition-colors duration-300">LinkedIn</a>
+                    </div>
+                </div>
+
+                <!-- Seção de Resumo Profissional -->
+                <section class="mb-8">
+                    <h3 class="text-2xl font-semibold text-white border-b-2 border-cyan-500 pb-2 mb-4">Resumo Profissional</h3>
+                    <p class="text-slate-300 leading-relaxed">Desenvolvedor de Sistemas com uma trajetória de rápida evolução, passando de aprendiz a programador efetivado. Com formação técnica pelo SENAI e cursando Análise e Desenvolvimento de Sistemas, possuo experiência prática no ciclo completo de desenvolvimento de software, desde a criação de aplicativos móveis com React Native até sistemas back-end robustos com Java e Spring. Sou apaixonado por dados, cloud e automação, buscando sempre aplicar as melhores práticas de DevOps e utilizar plataformas como Azure e Power BI para criar soluções eficientes e de alto impacto.</p>
+                </section>
+
+                <!-- Seção de Experiência Profissional -->
+                <section class="mb-8">
+                    <h3 class="text-2xl font-semibold text-white border-b-2 border-cyan-500 pb-2 mb-4">Experiência Profissional</h3>
+                    <div class="space-y-6">
+                        <div class="bg-slate-900/50 p-4 rounded-lg"><h4 class="font-bold text-white">Programador I | Tecnomotor</h4><p class="text-sm text-slate-400">Junho de 2025 – O momento</p></div>
+                        <div class="bg-slate-900/50 p-4 rounded-lg"><h4 class="font-bold text-white">Estagiário de Software | Tecnomotor</h4><p class="text-sm text-slate-400">Outubro de 2024 – Junho de 2025</p></div>
+                        <div class="bg-slate-900/50 p-4 rounded-lg"><h4 class="font-bold text-white">Aprendiz em Desenvolvimento de Sistemas | Grupo Novaes</h4><p class="text-sm text-slate-400">Janeiro de 2024 – Junho de 2024</p></div>
+                    </div>
+                </section>
+
+                <!-- Seção de Projetos em Destaque -->
+                 <section class="mb-8">
+                    <h3 class="text-2xl font-semibold text-white border-b-2 border-cyan-500 pb-2 mb-4">Projetos em Destaque</h3>
+                    <div class="space-y-4">
+                        <div class="bg-slate-900/50 p-4 rounded-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer"><h4 class="font-bold text-cyan-400">Geo Senai</h4><p class="text-sm text-slate-300 mb-2 mt-1">Desenvolvimento de um totem de autoatendimento para localização de alunos na escola SENAI.</p><p class="text-xs text-slate-400">Tecnologias: Java, React Native, Spring Framework, Spring Boot, Azure.</p></div>
+                        <div class="bg-slate-900/50 p-4 rounded-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer"><h4 class="font-bold text-cyan-400">JotNest (Projeto Pessoal)</h4><p class="text-sm text-slate-300 mb-2 mt-1">Aplicação para organização de tarefas e compromissos.</p><p class="text-xs text-slate-400">Tecnologias: React Native, GitHub, Kanban.</p></div>
+                        <div class="bg-slate-900/50 p-4 rounded-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer"><h4 class="font-bold text-cyan-400">Dashboard Empresarial</h4><p class="text-sm text-slate-300 mb-2 mt-1">Criação de um dashboard em Power BI para análise de dados e tomada de decisões.</p><p class="text-xs text-slate-400">Tecnologias: Microsoft Power BI, Análise de Dados.</p></div>
+                    </div>
+                </section>
+
+                <!-- Seção de Formação Acadêmica -->
+                <section class="mb-8">
+                    <h3 class="text-2xl font-semibold text-white border-b-2 border-cyan-500 pb-2 mb-4">Formação Acadêmica</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><span class="font-semibold text-white">Análise e Desenvolvimento de Sistemas</span> | Cruzeiro do Sul Virtual (2024 – 2025)</li>
+                        <li><span class="font-semibold text-white">Técnico em Desenvolvimento de Sistemas</span> | Senai São Paulo (2023 – 2024)</li>
+                    </ul>
+                </section>
+
+                <!-- Seção de Competências Técnicas -->
+                <section>
+                    <h3 class="text-2xl font-semibold text-white border-b-2 border-cyan-500 pb-2 mb-4">Competências Técnicas</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-cyan-500/80 text-white text-sm font-medium px-3 py-1 rounded-full">Java</span>
+                        <span class="bg-cyan-500/80 text-white text-sm font-medium px-3 py-1 rounded-full">Spring Boot</span>
+                        <span class="bg-cyan-500/80 text-white text-sm font-medium px-3 py-1 rounded-full">React Native</span>
+                        <span class="bg-cyan-500/80 text-white text-sm font-medium px-3 py-1 rounded-full">Power BI</span>
+                        <span class="bg-cyan-500/80 text-white text-sm font-medium px-3 py-1 rounded-full">Microsoft Azure</span>
+                        <span class="bg-cyan-500/80 text-white text-sm font-medium px-3 py-1 rounded-full">Google Cloud</span>
+                        <span class="bg-cyan-500/80 text-white text-sm font-medium px-3 py-1 rounded-full">DevOps</span>
+                        <span class="bg-cyan-500/80 text-white text-sm font-medium px-3 py-1 rounded-full">Análise de Dados</span>
+                        <span class="bg-cyan-500/80 text-white text-sm font-medium px-3 py-1 rounded-full">Git</span>
+                        <span class="bg-cyan-500/80 text-white text-sm font-medium px-3 py-1 rounded-full">GitHub</span>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Coluna da Hiasmin -->
+            <div class="bg-slate-800/80 backdrop-blur-sm p-8 rounded-2xl shadow-2xl border border-slate-700/50 flex flex-col">
+                 <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-white">HIASMIN LORRANE CARDOSO</h2>
+                    <p class="text-fuchsia-400 font-medium mt-1">Técnica em Dev. de Sistemas | Cursando Engenharia da Computação | RH com foco em T&D</p>
+                    <div class="flex justify-center items-center flex-wrap space-x-4 mt-4 text-slate-400 text-sm">
+                        <span>São Carlos SP</span>
+                        <span>•</span>
+                        <span>(16) 99147-4371</span>
+                    </div>
+                     <div class="flex justify-center items-center space-x-4 mt-2">
+                        <a href="mailto:hiasminlorrane8@gmail.com" class="text-fuchsia-400 hover:text-white transition-colors duration-300">E-mail</a>
+                        <a href="https://www.linkedin.com/in/hiasmin-lorrane-147820274" class="text-fuchsia-400 hover:text-white transition-colors duration-300">LinkedIn</a>
+                    </div>
+                </div>
+
+                 <!-- Seção de Resumo Profissional -->
+                <section class="mb-8">
+                    <h3 class="text-2xl font-semibold text-white border-b-2 border-fuchsia-500 pb-2 mb-4">Resumo Profissional</h3>
+                    <p class="text-slate-300 leading-relaxed">Profissional com uma combinação única de habilidades em Tecnologia e Recursos Humanos. Com formação Técnica em Desenvolvimento de Sistemas e Logística, e atualmente cursando Engenharia da Computação, possuo uma base sólida em desenvolvimento com Java, Spring, e automação com Home Assistant e Grafana. Hoje, atuo como Jovem Aprendiz na Faber-Castell, aplicando meu pensamento analítico e orientado a soluções para apoiar iniciativas de Treinamento e Desenvolvimento, unindo o universo da tecnologia ao desenvolvimento humano no ambiente corporativo.</p>
+                </section>
+
+                <!-- Seção de Experiência Profissional -->
+                <section class="mb-8">
+                    <h3 class="text-2xl font-semibold text-white border-b-2 border-fuchsia-500 pb-2 mb-4">Experiência Profissional</h3>
+                    <div class="space-y-6">
+                        <div class="bg-slate-900/50 p-4 rounded-lg"><h4 class="font-bold text-white">Recursos Humanos (Aprendiz) | Faber-Castell Brasil</h4><p class="text-sm text-slate-400">Agosto de 2025 – O momento</p><p class="text-sm text-slate-300 mt-2">Atuação na área de Treinamento e Desenvolvimento, apoiando a organização, planejamento e execução de programas de capacitação para colaboradores.</p></div>
+                        <div class="bg-slate-900/50 p-4 rounded-lg"><h4 class="font-bold text-white">Assistente Administrativo (Aprendiz) | EBM CONSTRUTORA</h4><p class="text-sm text-slate-400">Setembro de 2024 – Agosto de 2025</p></div>
+                    </div>
+                </section>
+
+                <!-- Seção de Projetos em Destaque -->
+                 <section class="mb-8">
+                    <h3 class="text-2xl font-semibold text-white border-b-2 border-fuchsia-500 pb-2 mb-4">Projetos em Destaque</h3>
+                    <div class="space-y-4">
+                        <div class="bg-slate-900/50 p-4 rounded-lg transform hover:scale-105 transition-transform duration-300 cursor-pointer"><h4 class="font-bold text-fuchsia-400">Projeto de Automação do Auditório (TCC)</h4><p class="text-sm text-slate-300 mb-2 mt-1">Liderou o desenvolvimento de um projeto para modernizar o auditório do Senai, permitindo controle de iluminação, áudio, vídeo e climatização por toque e comando de voz (Alexa).</p><p class="text-xs text-slate-400">Tecnologias: Home Assistant, YAML, Grafana, Análise de Dados, Pensamento Estratégico.</p></div>
+                    </div>
+                </section>
+
+                <!-- Seção de Formação Acadêmica -->
+                <section class="mb-8">
+                    <h3 class="text-2xl font-semibold text-white border-b-2 border-fuchsia-500 pb-2 mb-4">Formação Acadêmica</h3>
+                     <ul class="list-disc list-inside space-y-2">
+                        <li><span class="font-semibold text-white">Engenharia de Computação (Bacharelado)</span> | Univesp Oficial (2025 – 2029)</li>
+                        <li><span class="font-semibold text-white">Técnico em Desenvolvimento de Sistemas</span> | Senai São Paulo (2023 – 2024)</li>
+                        <li><span class="font-semibold text-white">Técnico em Logística</span> | Etec - Escola Técnica Estadual de São Paulo (2022 – 2024)</li>
+                    </ul>
+                </section>
+
+                <!-- Seção de Competências -->
+                <section>
+                    <h3 class="text-2xl font-semibold text-white border-b-2 border-fuchsia-500 pb-2 mb-4">Competências</h3>
+                    <div class="mb-4">
+                        <h4 class="font-semibold text-white mb-2">Técnicas</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-fuchsia-500/80 text-white text-sm font-medium px-3 py-1 rounded-full">Java</span>
+                            <span class="bg-fuchsia-500/80 text-white text-sm font-medium px-3 py-1 rounded-full">JavaScript</span>
+                            <span class="bg-fuchsia-500/80 text-white text-sm font-medium px-3 py-1 rounded-full">HTML/CSS</span>
+                            <span class="bg-fuchsia-500/80 text-white text-sm font-medium px-3 py-1 rounded-full">SQL</span>
+                            <span class="bg-fuchsia-500/80 text-white text-sm font-medium px-3 py-1 rounded-full">Spring</span>
+                            <span class="bg-fuchsia-500/80 text-white text-sm font-medium px-3 py-1 rounded-full">APIs</span>
+                            <span class="bg-fuchsia-500/80 text-white text-sm font-medium px-3 py-1 rounded-full">Home Assistant</span>
+                            <span class="bg-fuchsia-500/80 text-white text-sm font-medium px-3 py-1 rounded-full">Grafana</span>
+                        </div>
+                    </div>
+                     <div>
+                        <h4 class="font-semibold text-white mb-2">Profissionais e de RH</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-slate-600/80 text-white text-sm font-medium px-3 py-1 rounded-full">Treinamento e Desenvolvimento</span>
+                            <span class="bg-slate-600/80 text-white text-sm font-medium px-3 py-1 rounded-full">Pensamento Analítico</span>
+                            <span class="bg-slate-600/80 text-white text-sm font-medium px-3 py-1 rounded-full">Comunicação Eficaz</span>
+                            <span class="bg-slate-600/80 text-white text-sm font-medium px-3 py-1 rounded-full">Resolução de Problemas</span>
+                            <span class="bg-slate-600/80 text-white text-sm font-medium px-3 py-1 rounded-full">Planejamento</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Rodapé -->
+        <footer class="text-center mt-16 text-slate-500 text-sm">
+            <p>Portfólio criado com HTML e Tailwind CSS.</p>
+        </footer>
+    </div>
+</body>
+</html>
+
